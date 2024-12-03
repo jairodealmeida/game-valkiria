@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqygaivnoot"]
+
+[ext_resource type="PackedScene" uid="uid://c6r3jd2jbhmr6" path="res://scenes/knight.tscn" id="1_o1gqc"]
+
+[node name="MultiPlayers" type="Node"]
+
+[node name="Knight" parent="." instance=ExtResource("1_o1gqc")]
+
+[node name="MultiplayerInput2" type="MultiplayerSynchronizer" parent="Knight"]
+root_path = NodePath("../..")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="Knight"]
